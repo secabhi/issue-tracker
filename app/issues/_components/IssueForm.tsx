@@ -41,7 +41,7 @@ const IssueForm = ({ issue }: Props) => {
         await axios.post("/api/issues", data);
       }
       setIsSubmitting(false);
-      router.push("/issues");
+      router.push("/issues/list");
       router.refresh();
     } catch (err) {
       setIsSubmitting(false);
