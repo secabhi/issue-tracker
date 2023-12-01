@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Pagination from "./components/Pagination";
 import { useSearchParams } from "next/navigation";
+import LatestIssues from "./LatestIssues";
 
 export default function Home({
   searchParams,
@@ -8,10 +9,11 @@ export default function Home({
   searchParams: { page: string };
 }) {
   return (
-    <Pagination
-      count={100}
-      size={10}
-      currentPage={parseInt(searchParams.page) || 1}
-    />
+    <LatestIssues />
+    // <Pagination
+    //   count={100}
+    //   size={10}
+    //   currentPage={parseInt(searchParams.page) || 1}
+    // />
   );
 }
